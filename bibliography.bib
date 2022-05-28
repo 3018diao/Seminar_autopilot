@@ -1,3 +1,6 @@
+ @misc{tesla_2021, title={Full self-driving computer installations}, url={https://www.tesla.com/support/full-self-driving-computer}, journal={Tesla}, year={2021}, month={Nov}} 
+
+
 @Article{maitraapproach,
   author = {Maitra, Arkadip},
   title  = {An Approach for Modelling a Common Network for Autonomous Vehicles},
@@ -9,6 +12,11 @@
   title  = {Tesla Autopilot --- {Wikipedia}{,} The Free Encyclopedia},
   year   = {2022},
   url    = {https://en.wikipedia.org/w/index.php?title=Tesla\_Autopilot},
+}
+
+@article{maitraapproach,
+  title={An Approach for Modelling a Common Network for Autonomous Vehicles},
+  author={Maitra, Arkadip}
 }
 
 @Article{polyarush2019does,
@@ -54,6 +62,72 @@
   journal = {WikiChip},
   url     = {https://en.wikichip.org/wiki/tesla\_(car\_company)/fsd\_chip},
 }
+
+@ARTICLE{regnet,
+  author={Xu, Jing and Pan, Yu and Pan, Xinglin and Hoi, Steven and Yi, Zhang and Xu, Zenglin},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={RegNet: Self-Regulated Network for Image Classification}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-6},
+  doi={10.1109/TNNLS.2022.3158966}}
+  
+
+@InProceedings{Aggregated_Residual_Transformations,
+author = {Xie, Saining and Girshick, Ross and Dollar, Piotr and Tu, Zhuowen and He, Kaiming},
+title = {Aggregated Residual Transformations for Deep Neural Networks},
+booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {July},
+year = {2017}
+}
+
+@InProceedings{Lin_2017_CVPR,
+author = {Lin, Tsung-Yi and Dollar, Piotr and Girshick, Ross and He, Kaiming and Hariharan, Bharath and Belongie, Serge},
+title = {Feature Pyramid Networks for Object Detection},
+booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {July},
+year = {2017}
+}
+
+@InProceedings{Tan_2020_CVPR,
+author = {Tan, Mingxing and Pang, Ruoming and Le, Quoc V.},
+title = {EfficientDet: Scalable and Efficient Object Detection},
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2020}
+}
+
+@InProceedings{Redmon_2016_CVPR,
+author = {Redmon, Joseph and Divvala, Santosh and Girshick, Ross and Farhadi, Ali},
+title = {You Only Look Once: Unified, Real-Time Object Detection},
+booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2016}
+}
+
+@misc{zhang_2021, title={Deep understanding tesla FSD part 1: HydraNet}, url={https://saneryee-studio.medium.com/deep-understanding-tesla-fsd-part-1-hydranet-1b46106d57}, journal={Medium}, publisher={Medium}, author={Zhang, Jason}, year={2021}, month={Dec}} 
+
+@article{10.1145/1133255.1133997,
+author = {Nuzman, Dorit and Rosen, Ira and Zaks, Ayal},
+title = {Auto-Vectorization of Interleaved Data for SIMD},
+year = {2006},
+issue_date = {June 2006},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {41},
+number = {6},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/1133255.1133997},
+doi = {10.1145/1133255.1133997},
+abstract = {Most implementations of the Single Instruction Multiple Data (SIMD) model available today require that data elements be packed in vector registers. Operations on disjoint vector elements are not supported directly and require explicit data reorganization manipulations. Computations on non-contiguous and especially interleaved data appear in important applications, which can greatly benefit from SIMD instructions once the data is reorganized properly. Vectorizing such computations efficiently is therefore an ambitious challenge for both programmers and vectorizing compilers. We demonstrate an automatic compilation scheme that supports effective vectorization in the presence of interleaved data with constant strides that are powers of 2, facilitating data reorganization. We demonstrate how our vectorization scheme applies to dominant SIMD architectures, and present experimental results on a wide range of key kernels, showing speedups in execution time up to 3.7 for interleaving levels (stride) as high as 8.},
+journal = {SIGPLAN Not.},
+month = {jun},
+pages = {132–143},
+numpages = {12},
+keywords = {vectorization, Viterbi, subword parallelism, data reuse, SIMD}
+}
+
 
 
 @Comment{jabref-meta: databaseType:bibtex;}

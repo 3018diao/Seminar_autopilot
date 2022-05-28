@@ -30,29 +30,22 @@
 %\usepackage{amssymb}  % assumes amsmath package installed
 
 \title{\LARGE \bf
-Tesla's Autopilot: technology, approval and limits
+Tesla's Autopilot: Technology
 }
 
-%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
-%         \thanks{*Use the $\backslash$thanks command to put information here}\\
-%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
-%         University of Twente\\
-%         7500 AE Enschede, The Netherlands\\
-%         {\tt\small h.kwakernaak@autsubmit.com}}
-%         \hspace*{ 0.5 in}
-%         \parbox{3 in}{ \centering Pradeep Misra**
-%         \thanks{**The footnote marks may be inserted manually}\\
-%        Department of Electrical Engineering \\
-%         Wright State University\\
-%         Dayton, OH 45435, USA\\
-%         {\tt\small pmisra@cs.wright.edu}}
-%}
-
-\author{Huiyu Liu$^{1}$% <-this % stops a space
-% <-this % stops a space
-%
-%
+\author{ \parbox{3 in}{\centering Huiyu Liu
+        \thanks{*Use the $\backslash$thanks command to put information here}\\
+        Autonomous Vehicle Engineering\\
+        Faculty of Electrical Engineering and Information Technology\\
+        % Technische Hochschule Ingolstadt\\
+        {\tt\small hul7018@thi.de}}
 }
+
+% \author{Huiyu Liu$^{1}$% <-this % stops a space
+% % <-this % stops a space
+% %
+% %
+% }
 
 
 \begin{document}
@@ -66,24 +59,21 @@ Tesla's Autopilot: technology, approval and limits
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-
-This electronic document is a ``live'' template. The various components of your paper [title, text, heads, etc.] are already defined on the style sheet, as illustrated by the portions given in this document.
-
+The quick technological breakthrough in autonomous vehicles due to advances in artificial intelligence as well as significant improvements in processing hardware has resulted in enormous advancements in self-driving technology. In this article, the technology of Tesla Autopilot and FSD will be introduced, mainly related to sensors, FSD Computer and Model Architecture.
 \end{abstract}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{INTRODUCTION}
 
-This template, modified in MS Word 2003 and saved as ``Word 97-2003 \& 6.0/95 -- RTF'' for the PC, provides authors with most of the formatting specifications needed for preparing electronic versions of their papers. All standard paper components have been specified for three reasons: (1) ease of use when formatting individual papers, (2) automatic compliance to electronic requirements that facilitate the concurrent or later production of electronic products, and (3) conformity of style throughout a conference proceedings. Margins, column widths, line spacing, and type styles are built-in; examples of the type styles are provided throughout this document and are identified in italic type, within parentheses, following the example. Some components, such as multi-leveled equations, graphics, and tables are not prescribed, although the various table text styles are provided. The formatter will need to create these components, incorporating the applicable criteria that follow\cite{maitraapproach}.
+Tesla is creating a computer neural network system based on vision, similar to the human brain. The car's visual cortex is designed using software, hardware, and algorithms.
 
-\section{OVERVIEW OF AUTOPILOT AND FSD}
-
-The main similarity between Tesla's autopilot and full self-driving mode is the fact that the overall workload as a driver is less. Both modes require Tesla cars to be kitted out with numerous cameras, sensors, and an onboard computer for an extra layer of safety.
+The main similarity between Tesla's autopilot and full self-driving mode is the fact that the overall workload as a driver is less. Both modes require Tesla cars to be kitted out with numerous cameras, sensors, and an onboard computer for an extra layer of safety\cite{tesla_2021}.
 
 \subsection{Autopilot}
 
-Tesla Autopilot is a set of advanced driver-assistance system (ADAS) capabilities that amounts to Level 2 vehicle automation and is supplied by Tesla. Lane centering, traffic-aware cruise control, automatic lane changes, semi-autonomous navigation on limited-access highways, self-parking, and the option to summon the car from a garage or parking spot are some of its features. In all of these aspects, the driver is in charge, and the vehicle must be constantly monitored.
+Tesla Autopilot is a set of advanced driver-assistance system (ADAS) capabilities that amounts to Level 2 vehicle automation and is supplied by Tesla. Lane centering, traffic-aware cruise control, automatic lane changes, semi-autonomous navigation on limited-access highways, self-parking, and the option to summon the car from a garage or parking spot are some of its features\cite{maitraapproach}. In all of these aspects, the driver is in charge, and the vehicle must be constantly monitored\cite{tesla_2021}.
 
 \begin{enumerate}
 
@@ -97,7 +87,7 @@ Tesla Autopilot is a set of advanced driver-assistance system (ADAS) capabilitie
 
 \item \textbf{Traffic-Aware Cruise Control} determines when there is a vehicle in front of you in the same lane. Traffic-Aware Cruise Control maintains a set driving speed if the area in front of the Model 3 is clear. When a vehicle is detected, Traffic-Aware Cruise Control slows down Model 3 as needed to maintain a predetermined time-based distance from the vehicle ahead, up to the set speed. Traffic-Aware Cruise Control does not eliminate the need to keep an eye on the road ahead of you and apply the brakes manually when necessary.
 
-\item \textbf{Side collision} warning further enhances the active safety capabilities of car by sensing range and alerting drivers to objects such as cars that are too close to its side. Fluid lines will radiate from the car image in the instrument panel to alert the driver when the car detects an object close to its side.
+\item \textbf{Side collision} warning further enhances the active safety capabilities of car by sensing range and alerting drivers to objects such as cars that are too close to its side. Fluid lines will radiate from the car image in the instrument panel to alert the driver when the car detects an object close to its side\cite{polyarush2019does}.
 
 \begin{figure}[hbt!]
 \centering
@@ -116,9 +106,9 @@ Full Self-Driving (FSD) is an Autopilot upgrade package that adds more ADAS feat
 \begin{enumerate}
     \item \textbf{Auto Lane Change} assists in moving to an adjacent lane on the highway. When AutoLane Change is enabled, changing lanes is simple: simply activate the turn signal, and the car will move to the adjacent lane when it is safe to do so.
     
-    \item The car with \textbf{Auto-Park} can parallel park itself, removing the need for drivers to worry about difficult and complex parking maneuvers. When the Tesla car detects a parking spot while driving at low speeds around cities, a "P" will appear on the instrument panel. The Auto-Park guide, along with the rear camera display, will appear on the touch-screen, and once activated, Auto-Park will begin to park itself by controlling the steering and vehicle speed.
+    \item The car with \textbf{Auto-Park} can parallel park itself, removing the need for drivers to worry about difficult and complex parking maneuvers. When the Tesla car detects a parking spot while driving at low speeds around cities, a "P" will appear on the instrument panel. The Auto-Park guide, along with the rear camera display, will appear on the touch-screen, and once activated, Auto-Park will begin to park itself by controlling the steering and vehicle speed\cite{polyarush2019does}.
 
-    \item \textbf{Smart Summon} is intended to allow driver to move car to the location (using driver phone's GPS as a target destination) or to a location of driver choosing, maneuvering around and stopping for objects as needed. This can help driver get his car out of a tight parking spot, through puddles, or retrieve his car while carrying packages.
+    \item \textbf{Smart Summon} is intended to allow driver to move car to the location (using driver phone's GPS as a target destination) or to a location of driver choosing, maneuvering around and stopping for objects as needed. This can help driver get his car out of a tight parking spot, through puddles, or retrieve his car while carrying packages\cite{polyarush2019does}.
 
     \begin{figure}[hbt!]
     \centering
@@ -126,7 +116,7 @@ Full Self-Driving (FSD) is an Autopilot upgrade package that adds more ADAS feat
     \caption{AutoPark}
     \end{figure}
     
-    \item \textbf{Navigate on Autopilot} actively drives your car from an on-ramp to an off-ramp on a highway, including proposing lane changes, negotiating interchanges, automatically engaging the turn signal, and choosing the proper exit.
+    \item \textbf{Navigate on Autopilot} actively drives driver's car from an on-ramp to an off-ramp on a highway, including proposing lane changes, negotiating interchanges, automatically engaging the turn signal, and choosing the proper exit.
 \end{enumerate}
 
 \section{Sensors}
@@ -135,7 +125,7 @@ Tesla's Autopilot system is made up of many sensors that are strategically posit
 
 \subsection{Radar and Camera Combination} The Tesla Model S and Model X's front bumpers are equipped with radars with a range of several hundred meters that can detect cars and moving objects from a considerable distance. Unfortunately, the radar is incapable of detecting lanes or stationary objects such as people\cite{ingle2016tesla}. 
 
-Teslas are equipped with a number of cameras that detect objects in the immediate vicinity of the vehicle. A broad, main, narrow, front facing side, back looking side, and rear vision camera are all available. These all cover a variety of angles all around the car, thereby eliminating blind spots. Forward-looking cameras aid in the detection of vehicles about to enter your lane. When the automobile is in reverse, the rear view camera helps you to detect things. It also allows you to parallel park on your own.
+Teslas are equipped with a number of cameras that detect objects in the immediate vicinity of the vehicle. A broad, main, narrow, front facing side, back looking side, and rear vision camera are all available. These all cover a variety of angles all around the car, thereby eliminating blind spots\cite{ingle2016tesla}. Forward-looking cameras aid in the detection of vehicles about to enter your lane. When the automobile is in reverse, the rear view camera helps you to detect things. It also allows you to parallel park on your own.
 
 \begin{figure}[hbt!]
 \centering
@@ -157,7 +147,7 @@ which should be supervised.}
 \end{figure}
 
 
-A total of 12 ultrasonic sensors are installed in the Tesla automobile. The single sensors are evenly distributed on the front and back of the device. Only six of them are employed in the above diagram, three on each side of the car: the front-side and rear sensors (aperture 75 degrees), as well as a passive rear-side sensor (aperture 50 degrees) that only collects ultrasonic echoes emitted by the rear sensor. To fuse signals from all ultrasonic sensors, a particle filter with mixture tracking capabilities is used to perform Bayesian filtering in terms of Monte Carlo sampling.
+A total of 12 ultrasonic sensors are installed in the Tesla automobile. The single sensors are evenly distributed on the front and back of the device. Only six of them are employed in the above diagram, three on each side of the car: the front-side and rear sensors (aperture 75 degrees), as well as a passive rear-side sensor (aperture 50 degrees) that only collects ultrasonic echoes emitted by the rear sensor. To fuse signals from all ultrasonic sensors, a particle filter with mixture tracking capabilities is used to perform Bayesian filtering in terms of Monte Carlo sampling\cite{wiki_autopilot}.
 
 
 \section{Full Self-Driving Computer}
@@ -308,7 +298,7 @@ A 96 * 96 array of MAC cells makes up the dot-product engine. Each cell multipli
 Each accumulator cell is made up of two 30bit registers: a shift register and an accumulator. The dot product result is copied into the shift register and the accumulator is cleared once a compute sequence is done. This permits the SIMD engine to send the results out as the dot product engine begins the next compute phase.
 
 \subsubsection{SIMD Unit}
-The SIMD unit is a 96-wide datapath that can execute a full set of arithmetic instructions. It receives 96 values from the dot product engine at a time (one accumulator row) and then performs a postprocessing function as a series of instructions (SIMD program). The SRAM cannot be accessed directly by a SIMD application, and flow control instructions are not supported (branches). For each group of 96 values extracted from the MAC array, the same program is run.
+The SIMD unit is a 96-wide datapath that can execute a full set of arithmetic instructions. It receives 96 values from the dot product engine at a time (one accumulator row) and then performs a postprocessing function as a series of instructions (SIMD program). The SRAM cannot be accessed directly by a SIMD application, and flow control instructions are not supported (branches). For each group of 96 values extracted from the MAC array, the same program is run\cite{10.1145/1133255.1133997}.
 
 The SIMD unit can be programmed with a wide range of data types, including 8-bit, 16-bit, and 32-bit integers, as well as single-precision floating point (FP32). For control flow, the instruction set also includes conditional execution. The input data must be 30-bit wide (cast as int32) and the final output must be 8-bit wide (signed or unsigned int8), although the intermediate data types can differ between the input and output.
 
@@ -323,10 +313,151 @@ The NNA stores weights and activations in a 32-MB local SRAM. The SRAM is implem
 Command Sequencer, Network Sequencer, Address and Data Sequencers, and SIMD Unit are the state machines that handle the control logic. Multiple network programs can be queued and executed in order by each NNA. The Command Sequencer keeps track of these programs and their status registers in a queue. When a network is finished, the accelerator sends an interrupt to the host system. One of the CPUs' software can check the network's completion status and re-enable it to process a new input frame. The Address Sequencer generates a stream of SRAM addresses and commands for the computation downstream after a compute instruction has been decoded and directed to its execution state machine. It divides the output space into sections of up to 96 * 96 elements and sequences through all the terms of the corresponding dot-product for each section.
 
 
-\section{PROPOSED MODEL}
+\section{MODEL ARCHITECTURE}
+
+In order to perform such a complex perception task, Tesla has made a lot of considerations in the choice of neural network structure\cite{zhang_2021}.
+
+For object detection, there is a general structure (Figure \ref{object_detection_structure}): \textit{Input -> Backbone -> Neck -> Head -> Output}
+
+\begin{itemize}
+    \item \textbf{Backbone}: refers to the feature extracting network, which is used to recognize several objects in a single image and provides rich features information of objects. Backbone networks such as AlexNet, ResNet, and VGGNet are frequently used.
+    
+    \item \textbf{Detection Head}: It gives us a feature maps representation of the input after the feature extract (backbone). For some tasks, like object detection, segmentation, and so on. 
+    
+    \item \textbf{Neck}: The neck is between the backbone and head, it is used to extract some more elaborate features.(e.g. feautre pyramid network(FPN), BiFPN)\cite{zhang_2021}
+\end{itemize}
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.48\textwidth]{gfx/object_detection_structure.png}
+\caption{Object detection structure}
+\label{object_detection_structure}
+\end{figure}
+
+The Tesla Neural Network Architecture is as follows (Figure \ref{tesla_detection_structure}): 
+
+\begin{itemize}
+    \item \textbf{Backbone}: RegNet + ResNet
+    \item \textbf{Neck}: BiFPN
+    \item \textbf{Head}: HydraNet
+\end{itemize}
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.48\textwidth]{gfx/tesla_detection_structure.png}
+\caption{Object detection structure of Tesla}
+\label{tesla_detection_structure}
+\end{figure}
+
+\subsection{Neural Network Backbone}
+Tesla's neural network backbone is the Regnet (regular network structures) designed with residual neural network blocks. RegNet is a novel network design paradigm described in the paper Designing Network Design Spaces by Facebook AI Research (FAIR). Instead of focusing on creating specific network instances (such as NAS), this study explores network structure (e.g., width, depth, groups, etc.) utilizing standard model families like as VGG, ResNet, and ResNeXt. Finally, it will be given a low-dimensional design space called RegNet, which is made up of simple "regular" networks.
+
+\subsubsection{RegNet}
+The study creates an initial, unconstrained design space called AnyNet, and then forms AnyNetX using the typical residual bottleneck block\cite{regnet}. The Figure \ref{anynet} depicts the AnyNet's general network structure.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.48\textwidth]{gfx/AnyNet.png}
+\caption{Structure of AnyNet}
+\label{anynet}
+\end{figure}
+
+There are three sections to the network:
+
+\begin{enumerate}
+    \item \textbf{Stem}: Use a convolution ($kernel\_size = 3$, $stride = 2$, $w_{0} = 32$ output channels) to process the images and resolution reduced by one-half.
+    \item \textbf{Body}: Performs the bulk of the computation. The network body is composed of a sequence of stages that operate at progressively reduced resolution $r_{i}$. Each stage consists of a sequence of identical blocks.
+    \item \textbf{Head}: Predicts \textit{n} outputs classes.
+\end{enumerate}
+
+The Figure \ref{x_block} indicates two types of X block. The X block is built on a traditional residual bottleneck with a group\cite{Aggregated_Residual_Transformations}. A 1x1 conv, a 3x3 group conv, and a final 1x1 conv make up each X block, with the 1x1 conv changing the channel width. The design process for the design space is mostly focused on constructing the network's body. Each network in the AnyNetX design space has 16 degrees of freedom since each stage includes four parameters: the number of blocks $d_{i}$, block width $w_{i}$, bottleneck ratio $b_{i}$, and group with $g_{i}$.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.48\textwidth]{gfx/x_block.png}
+\caption{Two types of X block}
+\label{x_block}
+\end{figure}
+
+According to the paper's analysis approach EDF (the error empirical distribution function), AnyNetX evolved into RegNet, a design space with six degrees of freedom, after being simplified step by step. $d$(network depth), $w_{0}$(initial width/output channel), slope $w_{a}$, $w_{m}$(width multiplier), $b$(bottleneck ratio), and $g$(bottleneck ratio) are the six parameters (group convolution width). 
+
+Following the neural network backbone processing, the RegNet gives a number of features at different resolutions in different scales. In this feature extraction network, it has very high resolution with very low channel counts at the bottom and low resolution with high channel counts at the top. These features of various scales and resolutions will be processed further in the feature pyramid network\cite{zhang_2021}.
+
+\subsection{Neck}
+Early object detection techniques often connect the detection head to the feature map of the last layer of the backbone's final stage. In the object detection task, the shallow networks (at the bottom of the networks) have a high resolution, which is beneficial for learning image details; the deep networks (at the top of the networks) have a low resolution, which is beneficial for semantic learning. In fact, it is challenging to successfully recognize items of diverse scales on a single feature map at the same time. As a result, the feature maps of different phases combine to build a feature pyramid network, which is then used to characterize objects of various scales and detect objects based on the feature pyramid\cite{zhang_2021}.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.48\textwidth]{gfx/pyramid_network.png}
+\caption{Evolution of FPN}
+\label{pyramid}
+\end{figure}
+
+Figure \ref{pyramid}(a) is a standard featured image pyramid that builds a feature pyramid from an image pyramid. Each image scale's features are computed independently. It is quite slow. Deep convolutional networks (ConvNets) are used in a single feature map in Figure \ref{pyramid}(b). This approach represents more abstract semantics. Figure \ref{pyramid}(c) is the Single Shot Detector (SSD) algorithm, which predicts by reusing multi-scale feature maps from distinct layers. However, it has poor semantics at the lowest level. Figure \ref{pyramid}(d) is a top-down pathway and lateral connections-based design that mixes low-resolution, semantically strong features with high-resolution, semantically weak data\cite{Lin_2017_CVPR}. This architecture is inspired by SSD's detection approach and ResNet's "shortcut connections."
+
+Tesla use BiFPN to achieve multi-scale feature pyramid fusion. BiFPN is the paper's proposed weighted bi-directional feature pyramid network by Google Research \cite{Tan_2020_CVPR}. BiFPN is a better variant of FPN. There are two major enhancements as follow:
+
+\begin{enumerate}
+    \item After the top-down feature fusion, it does fusion again from the bottom-up.
+    \item When fusing features, BiFPN notices that because different input features have varied resolutions, they usually contribute unequally to the output feature. As a result, they assign a weight to each input\cite{Tan_2020_CVPR}.
+\end{enumerate}
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.48\textwidth]{gfx/BiFPN.png}
+\caption{Feature network design}
+\label{bifpn}
+\end{figure}
+
+Regnet replaced EfficientDet as the backbone in Tesla AI (Figure \ref{bifpn_tesla}).
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.48\textwidth]{gfx/bifpn_tesla.png}
+\caption{Regnet replace EfficientDet}
+\label{bifpn_tesla}
+\end{figure}
+
+\subsection{Detection Head}
+The network's detecting head is connected after the BiFPN layer. This detecting head is made up of several task-specific heads. When detecting a car, the Tesla AI team will utilize a one-stage YOLO-like object detector as the head. This YOLO refers to “you only look once”, a new approach to object detection. Users only look at an image once in this algorithm to forecast what objects are present (classification task) and where they are (regression bounding boxes + confidence)\cite{Redmon_2016_CVPR}.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.48\textwidth]{gfx/yolo.png}
+\caption{You Only Look Once(YOLO)}
+\label{yolo}
+\end{figure}
+
+Tesla creates a raster with a binary bit per place that indicates whether or not a car is there. Furthermore, if there is, here are some other attributes such as (x, y)coordinate, the width and height of the bounding box, and what type of car this is.
+
+
+\subsection{HydraNets}
+There are many duties to do in the Tesla FSD mission, not only the duty of detecting autos. Many duties are converged in a new architectural structure with a common shared backbone and branches off into a number of heads. HydraNets is the name given to this design\cite{zhang_2021}.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.4\textwidth]{gfx/hydranets.png}
+\caption{HydraNets}
+\label{hydranets}
+\end{figure}
+
+The HydraNets have three major advantages:
+\begin{enumerate}
+    \item \textbf{Feature Sharing}: Reduced repetitive convolution calculations, reduce the number of backbones, especially efficient at test-time
+    \item \textbf{De-Couples Tasks}: De-couple the specific tasks from the backbone, able to fine-tune tasks individually
+    \item \textbf{Representation Bottleneck}: Cache features during training, when they are doing fine-tuning workflow, only use the cached feature to fine-tune the heads.
+\end{enumerate}
+\\ \hspace*{\fill} \\
+HydraNet training workflows:
+\begin{enumerate}
+\item Do an end-to-end training, where they train everything jointly
+\item Cache the features at the multi-scale feature level.
+\item Fine-tune each specific task using the cached features
+item End-to-end training once again and iterate
+\end{enumerate}
 
 \section{CONCLUSIONS}
-
+This article mainly analyzes Tesla Autopilot and FSD through three aspects, namely sensor, chip and Model Architecture. Tesla mainly used Radar, Camera, and Ultrasonic as sensors, and did not use LIDAR like other car manufacturers. 
 
 
 \addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
